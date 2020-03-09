@@ -1,2 +1,33 @@
 \clearpage
-\chapter{WebRTC}
+\chapter{WebRTC example applications}
+In this chapter we'll show some example applications and implementations. These are in a minified version and do not necessarily represent the best practices that should be applied. Nevertheless, there will be sources provided where those best practices can be deducted.
+
+\section{Video chat}
+
+\subsection{Accessing client media}
+
+\subsubsection{Feature check}
+First we should check if the current environment supports the needed API's.
+\lstinputlisting[language=JavaScript]{examples/featureCheck.js}
+
+https://codesandbox.io/s/feature-check-xqv8t
+
+\subsubsection{Access media}
+Then when we have checked if the API's is present we can access client medias, given the user has given his consent.
+
+First we'll add a video channel so the user can see the input from the camera.
+\lstinputlisting[language=HTML]{examples/accessMedia.html}
+For more details on best practices with video medias https://developers.google.com/web/fundamentals/media/video
+
+Then we use this code to access the media and present it with the video tag.
+\lstinputlisting[language=JavaScript]{examples/accessMedia.js}
+https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
+
+https://codesandbox.io/s/access-device-uwvby
+
+\subsection{Establish connection}
+https://codesandbox.io/s/open-connection-lri4p
+\lstinputlisting[language=JavaScript]{examples/connect.js}
+
+\subsection{Send data}
+\subsection{Disconnect}

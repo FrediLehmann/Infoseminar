@@ -1,0 +1,38 @@
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{bggray}{RGB}{234, 234, 234}
+\definecolor{purple}{RGB}{118, 29, 29}
+\definecolor{jsgreen}{RGB}{77, 168, 13}
+\definecolor{gray}{RGB}{66, 66, 66}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={if, else, break, case, catch, continue, debugger, default, delete, do, finally, for, return, switch, throw, try, var, let, const, while, with, class, export, import, throw, implements, null, typeof, void, boolean, throw, this},
+  ndkeywords={true, false, function, async, await, in, instanceof, new, typeof},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywordstyle=\color{purple}\bfseries,
+  identifierstyle=\color{black},
+  commentstyle=\color{gray}\ttfamily,
+  stringstyle=\color{jsgreen}\ttfamily,
+  sensitive=true
+}
+
+\lstset{
+   language=JavaScript,
+   backgroundcolor=\color{bggray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
