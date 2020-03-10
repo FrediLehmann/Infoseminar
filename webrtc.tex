@@ -2,15 +2,33 @@
 \chapter{WebRTC example applications}
 In this chapter we'll show some example applications and implementations. These are in a minified version and do not necessarily represent the best practices that should be applied. Nevertheless, there will be sources provided where those best practices can be deducted.
 
+\section{Connect}
+This examples shows in a minimal way, how to create a RTC connection. Important in this case is that, the sender creates an offer which is then used to create the \lstinline[basicstyle=\ttfamily\color{black}]|localDescription| for the sender and the \lstinline[basicstyle=\ttfamily\color{black}]|remoteDescription| for the receiver. The receiver on the other hand creates an answer which is used to set the \lstinline[basicstyle=\ttfamily\color{black}]|localDescription| of the receiver and the \lstinline[basicstyle=\ttfamily\color{black}]|remoteDescription| of the sender.
+
+\textit{This example shows a version where the sender and receiver are the same client. For a real world application those code parts would be separated, the offer and the answer would be transferred through a signaling service which is not part of the WebRTC specs. Additionally the ICE Candidates would need to negotiated between the peers. This will be explored in a following section.}
+
+\lstinputlisting[language=JavaScript, style=JavaScript]{examples/miniConnect.js}
+
+\section{Disconnect}
+The connection can be closed by simply call the close function of the RTC connection.
+
+\lstinputlisting[language=JavaScript, style=JavaScript]{examples/disconnect.js}
+
+\section{Finding ICE Candidates}
+
+
+\section{Sending Data}
+In this section we will showcase the ability to transfer arbitrary data between peers. In our case we will send text data, but it could be data in any format.
+
+\lstinputlisting[language=JavaScript, style=JavaScript]{examples/sendData.js}
+
 \section{Video chat}
 
 \subsection{Accessing client media}
 
 \subsubsection{Feature check}
 First we should check if the current environment supports the needed API's.
-\lstinputlisting[language=JavaScript]{examples/featureCheck.js}
-
-https://codesandbox.io/s/feature-check-xqv8t
+\lstinputlisting[language=JavaScript, style=JavaScript]{examples/featureCheck.js}
 
 \subsubsection{Access media}
 Then when we have checked if the API's is present we can access client medias, given the user has given his consent.
@@ -20,14 +38,9 @@ First we'll add a video channel so the user can see the input from the camera.
 For more details on best practices with video medias https://developers.google.com/web/fundamentals/media/video
 
 Then we use this code to access the media and present it with the video tag.
-\lstinputlisting[language=JavaScript]{examples/accessMedia.js}
+\lstinputlisting[language=JavaScript, style=JavaScript]{examples/accessMedia.js}
 https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
 
-https://codesandbox.io/s/access-device-uwvby
+\subsubsection{Send Media}
+\lstinputlisting[language=JavaScript, style=JavaScript]{examples/sendMedia.js}
 
-\subsection{Establish connection}
-https://codesandbox.io/s/open-connection-lri4p
-\lstinputlisting[language=JavaScript]{examples/connect.js}
-
-\subsection{Send data}
-\subsection{Disconnect}
