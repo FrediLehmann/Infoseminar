@@ -9,3 +9,7 @@
 *.xml
 *-blx.bib
 *.out
+*.glo
+*.glg
+*.ist
+*.gls

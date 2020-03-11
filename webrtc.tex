@@ -1,8 +1,8 @@
 \clearpage
-\chapter{WebRTC example applications}
+\chapter{\Gls{webrtc} example applications}
 In this chapter we'll show some example applications and implementations. These are in a minified version and do not necessarily represent the best practices that should be applied. Where ever possible sources will be provided where those best practices can be read on.
 
-\textit{These examples show versions where the sender and receiver are the same client. For a real world application those code parts would be separated. The needed communication information, like offer, answer or ICE candidate, would be transferred through a signaling service which is not part of the WebRTC specs. Additionally the ICE candidates need to be negotiated between the peers. This will be explored in a following section.}
+\textit{These examples show versions where the sender and receiver are the same client. For a real world application those code parts would be separated. The needed communication information, like offer, answer or ICE candidate, would be transferred through a signaling service which is not part of the \Gls{webrtc} specs. Additionally the ICE candidates need to be negotiated between the peers. This will be explored in a following section.}
 
 \section{Connect}
 This examples shows in a minimal way, how to create a RTC connection. Important in this case is that, the sender creates an offer which is then used to create the \lstinline[basicstyle=\ttfamily\color{black}]|localDescription| for the sender and the \lstinline[basicstyle=\ttfamily\color{black}]|remoteDescription| for the receiver. The receiver on the other hand creates an answer which is used to set the \lstinline[basicstyle=\ttfamily\color{black}]|localDescription| of the receiver and the \lstinline[basicstyle=\ttfamily\color{black}]|remoteDescription| of the sender.
@@ -25,7 +25,7 @@ In this section we will showcase the ability to transfer arbitrary data between 
 \subsection{Accessing client media}
 
 \subsubsection{Feature check}
-We need to check if the current environment supports the needed API's. Here is an example of such a check.
+We need to check if the current environment supports the needed \Gls{api}'s. Here is an example of such a check.
 \lstinputlisting[language=JavaScript, style=JavaScript]{examples/featureCheck.js}
 
 \subsubsection{Access media}

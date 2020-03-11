@@ -1,12 +1,12 @@
 \clearpage
 \chapter{Introduction}
-WebRTC is short for web real-time communication, it is an API that modern browser support and can be used by web developers to implement a peer to peer communication. It can be used to capture and stream audio and/or video data, as well as to exchange arbitrary data between browsers. This technology does not require an intermediary.
+\Gls{webrtc} is short for web real-time communication, it is an \Gls{api} that modern browser support and can be used by web developers to implement a peer to peer communication. It can be used to capture and stream audio and/or video data, as well as to exchange arbitrary data between browsers. This technology does not require an intermediary.
 
 \section{Support}
-All major browser support WebRTC in its newest release. Older versions might not, or only partially, implement this API so the Adapter.js~\autocite{adapterjs} project should be considered for productive solutions. For detailed information on supported browsers use caniuse~\autocite{caniuse}.
+All major browser support \Gls{webrtc} in its newest release. Older versions might not, or only partially, implement this \Gls{api} so the Adapter.js~\autocite{adapterjs} project should be considered for productive solutions. For detailed information on supported browsers use caniuse~\autocite{caniuse}.
 
 \section{Signaling server}
-Although the WebRTC is a peer to peer communication API it can not fully function without a server. It needs a signaling server to resolve how to connect peers over the internet. The signaling server is an intermediary, so two peers find each other and can establish a connection. After the peers have found each other and have exchanged their negotiation messages they don't need the signaling server anymore.
+Although the \Gls{webrtc} is a peer to peer communication \Gls{api} it can not fully function without a server. It needs a signaling server to resolve how to connect peers over the internet. The signaling server is an intermediary, so two peers find each other and can establish a connection. After the peers have found each other and have exchanged their negotiation messages they don't need the signaling server anymore.
 
 \section{Session Establishment}
 The session establishment uses different network methods to create connection to a peer. This also includes substitutions for situations where the default connection can not be established.
@@ -59,17 +59,17 @@ The following figure gives an overview over the complete communication mechanism
 \begin{figure}[H]
 	\includegraphics[scale=0.5]{images/webrtc-complete-diagram.png}
 	\centering
-	\caption{WebRTC Complete communication schema, \url{https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity}}
+	\caption{\Gls{webrtc} Complete communication schema, \url{https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity}}
 	\label{fig:WebRTC}
 \end{figure}
 
 \section{Security}
-Generally WebRTC traffic is encrypted using Datagram Transport Layer Security (DTLS). Your data will be as secure as using any standard SSL based connection. Traffic that is relayed over a TURN server on the other hand is not necessarily end-to-end encrypted.
+Generally \Gls{webrtc} traffic is encrypted using Datagram Transport Layer Security (DTLS). Your data will be as secure as using any standard SSL based connection. Traffic that is relayed over a TURN server on the other hand is not necessarily end-to-end encrypted.
 
 \textit{Confidentiality for the application data relayed by TURN is best provided by the application protocol itself, since running TURN over TLS does not protect application data between the server and the peer. If confidentiality of application data is important, then the application should encrypt or otherwise protect its data. For example, for real-time media, confidentiality can be provided by using SRTP.}~\cite{TURN:sec}
 
-\section{Related API's}
-There are multiple related topics to WebRTC. In this section we'll try to give a quick overview over the most important ones.
+\section{Related \Gls{api}'s}
+There are multiple related topics to \Gls{webrtc}. In this section we'll try to give a quick overview over the most important ones.
 
-\subsubsection{Media Capture and Streams API}
-This API is heavily related to WebRTC, it provides support for streaming audio and video data. Provided are interfaces and methods for working with the success and error callbacks when using the data asynchronously and the events that are fired during the process, as well as the constraints associated with data formats.
+\subsubsection{Media Capture and Streams \Gls{api}}
+This \Gls{api} is heavily related to \Gls{webrtc}, it provides support for streaming audio and video data. Provided are interfaces and methods for working with the success and error callbacks when using the data asynchronously and the events that are fired during the process, as well as the constraints associated with data formats.
