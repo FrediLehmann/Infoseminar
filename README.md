@@ -4,4 +4,6 @@ In this paper we will explore the state of WebRTC and its pitfalls. WebRTC is a 
 
 ## Commands
 
-- `makeglossaries glossaries`
+- `pdflatex Infoseminar.tex`
+- `makeglossaries Infoseminar`
+- `bibtex Infoseminar`
