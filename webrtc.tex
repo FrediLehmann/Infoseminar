@@ -1,25 +1,23 @@
 \clearpage
 \chapter{WebRTC example applications}
-In this chapter we'll show some example applications and implementations. These are in a minified version and do not necessarily represent the best practices that should be applied. Nevertheless, there will be sources provided where those best practices can be deducted.
+In this chapter we'll show some example applications and implementations. These are in a minified version and do not necessarily represent the best practices that should be applied. Where ever possible sources will be provided where those best practices can be read on.
+
+\textit{These examples show versions where the sender and receiver are the same client. For a real world application those code parts would be separated. The needed communication information, like offer, answer or ICE candidate, would be transferred through a signaling service which is not part of the WebRTC specs. Additionally the ICE candidates need to be negotiated between the peers. This will be explored in a following section.}
 
 \section{Connect}
 This examples shows in a minimal way, how to create a RTC connection. Important in this case is that, the sender creates an offer which is then used to create the \lstinline[basicstyle=\ttfamily\color{black}]|localDescription| for the sender and the \lstinline[basicstyle=\ttfamily\color{black}]|remoteDescription| for the receiver. The receiver on the other hand creates an answer which is used to set the \lstinline[basicstyle=\ttfamily\color{black}]|localDescription| of the receiver and the \lstinline[basicstyle=\ttfamily\color{black}]|remoteDescription| of the sender.
 
-\textit{This example shows a version where the sender and receiver are the same client. For a real world application those code parts would be separated, the offer and the answer would be transferred through a signaling service which is not part of the WebRTC specs. Additionally the ICE Candidates would need to negotiated between the peers. This will be explored in a following section.}
-
+\textit{Since sender and receiver are the same client we can set the ICE candidate in a minimal way. These process would be more complex in a real world application.}
 \lstinputlisting[language=JavaScript, style=JavaScript]{examples/miniConnect.js}
 
 \section{Disconnect}
 The connection can be closed by simply call the close function of the RTC connection.
-
 \lstinputlisting[language=JavaScript, style=JavaScript]{examples/disconnect.js}
-
-\section{Finding ICE Candidates}
-
 
 \section{Sending Data}
 In this section we will showcase the ability to transfer arbitrary data between peers. In our case we will send text data, but it could be data in any format.
 
+\textit{The code only contains the necessary lines. Code that does not provide insights on the topic got removed.}
 \lstinputlisting[language=JavaScript, style=JavaScript]{examples/sendData.js}
 
 \section{Video chat}
@@ -27,20 +25,20 @@ In this section we will showcase the ability to transfer arbitrary data between 
 \subsection{Accessing client media}
 
 \subsubsection{Feature check}
-First we should check if the current environment supports the needed API's.
+We need to check if the current environment supports the needed API's. Here is an example of such a check.
 \lstinputlisting[language=JavaScript, style=JavaScript]{examples/featureCheck.js}
 
 \subsubsection{Access media}
-Then when we have checked if the API's is present we can access client medias, given the user has given his consent.
+For accessing client media, such as audio and video, the users consent is needed. This permission request is handled by the browser automatically. The application on the other hand needs to handle the case of not getting the permissions needed.
 
-First we'll add a video channel so the user can see the input from the camera.
-\lstinputlisting[language=HTML]{examples/accessMedia.html}
-For more details on best practices with video medias https://developers.google.com/web/fundamentals/media/video
-
-Then we use this code to access the media and present it with the video tag.
+In this example we see how client media, in this case video and audio, can be accessed.
 \lstinputlisting[language=JavaScript, style=JavaScript]{examples/accessMedia.js}
-https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
 
-\subsubsection{Send Media}
+\subsection{Send Media}
+In the following example we will take a look on how media can be send between peers.
+
+\textit{The code only contains the necessary lines. Code that does not provide insights on the topic got removed.}
 \lstinputlisting[language=JavaScript, style=JavaScript]{examples/sendMedia.js}
 
+\section{ICE Candidates}
+In a real world application we need to gather possible ICE candidates for our connection. This is achieved by gathering the sending clients ICE candidates and exchange them with the ICE candidates from the receiving client. This starts with the highest priority candidates and continues to the lowest until a common candidate is found. The \lstinline[basicstyle=\ttfamily\color{black}]|onicecandidate| event handler is used to listen for incoming ICE candidates.

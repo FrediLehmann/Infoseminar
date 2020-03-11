@@ -3,13 +3,9 @@ const constraints = {
 	video: true
 };
 
-const video = document.querySelector("video");
-
-if (hasUserMedia()) {
-	navigator
-		.mediaDevices
-		.getUserMedia(constraints)
-		.then(stream => {
-			video.srcObject = stream;
-		});
-}
+navigator
+	.mediaDevices
+	.getUserMedia(constraints)
+	.then(stream => {
+		// use the stream, for example to present to the user
+	});

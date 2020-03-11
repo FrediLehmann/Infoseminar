@@ -1,26 +1,16 @@
-let sender;
 let senderChannel;
-let receiver;
 
 async function send() {
+  // Send data
   senderChannel.send(document.querySelector("#senderArea").value);
 }
 
 async function init() {
-  // Create sender / receiver connection
-  sender = new RTCPeerConnection(null);
+  let sender = new RTCPeerConnection(null);
   senderChannel = sender.createDataChannel("sendDataChannel");
+  let receiver = new RTCPeerConnection(null);
 
-  // Set ICE candidate
-  sender.onicecandidate = e =>
-    !e.candidate || receiver.addIceCandidate(e.candidate);
-
-  receiver = new RTCPeerConnection(null);
-
-  // Set ICE candidate
-  receiver.onicecandidate = e =>
-    !e.candidate || sender.addIceCandidate(e.candidate);
-
+  // listen on data received
   receiver.ondatachannel = e => {
     e.channel.onmessage = event => {
       document.querySelector("#recieverArea").value = event.data;
@@ -35,7 +25,3 @@ async function init() {
   receiver.setLocalDescription(answer);
   sender.setRemoteDescription(answer);
 }
-
-(function() {
-  init();
-})();
