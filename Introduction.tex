@@ -1,15 +1,15 @@
 \clearpage
 \chapter{Introduction}
-\Gls{webrtc} is short for web real-time communication, it is an \Gls{api} that modern browser support and can be used by web developers to implement a peer to peer communication. It can be used to capture and stream audio and/or video data, as well as to exchange arbitrary data between browsers. This technology does not require an intermediary.
+\index{webrtc}{} is short for web real-time communication, it is an \index{api}{} that modern browser support and can be used by web developers to implement a peer-to-peer communication. It can be used to capture and stream audio and/or video data, as well as to exchange arbitrary data between browsers. This technology does not require an intermediary.
 
 \section{Web Browser Support}
-All major browser support \Gls{webrtc} in its newest release. Older versions might not, or only partially, implement this \Gls{api} so the Adapter.js~\autocite{adapterjs} project should be considered for productive solutions. For detailed information on supported browsers use caniuse~\autocite{caniuse}.
+All major browser support \index{webrtc}{} in its newest release. Older versions might not, or only partially, implement this \index{api}{} so the Adapter.js~\autocite{adapterjs} project should be considered for productive solutions. For detailed information on supported browsers use caniuse~\autocite{caniuse}.
 
 \section{Signaling server}
-Although the \Gls{webrtc} is a peer to peer communication \Gls{api} it can not fully function without a server. It needs a signaling server to resolve how to connect peers over the internet. The signaling server is an intermediary, so two peers find each other and can establish a connection. After the peers have found each other and have exchanged their negotiation messages they don't need the signaling server anymore.
+Although the \index{webrtc}{} is a peer-to-peer communication \index{api}{} it can not fully function without a server. It needs a signaling server to resolve how to connect peers over the internet. The signaling server is an intermediary, so two peers find each other and can establish a connection. After the peers have found each other and have exchanged their negotiation messages they don't need the signaling server anymore.
 
-\section{Related \Gls{api}'s}
-There are multiple related topics to \Gls{webrtc}. In this section we'll try to give a quick overview over the most important ones.
+\section{Related \index{api}{}'s}
+There are multiple related topics to \index{webrtc}{}. In this section we'll try to give a quick overview over the most important ones.
 
-\subsubsection{Media Capture and Streams \Gls{api}}
-This \Gls{api} is heavily related to \Gls{webrtc}, it provides support for streaming audio and video data. Provided are interfaces and methods for working with the success and error callbacks when using the data asynchronously and the events that are fired during the process, as well as the constraints associated with data formats.
+\subsubsection{Media Capture and Streams \index{api}{}}
+This \index{api}{} is heavily related to \index{webrtc}{}, it provides support for streaming audio and video data. Provided are interfaces and methods for working with the success and error callbacks when using the data asynchronously and the events that are fired during the process, as well as the constraints associated with data formats.
