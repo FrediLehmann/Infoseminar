@@ -7,3 +7,4 @@ In this paper we will explore the state of WebRTC and its pitfalls. WebRTC is a 
 - `pdflatex Infoseminar.tex`
 - `makeglossaries Infoseminar`
 - `bibtex Infoseminar`
+- `makeindex Infoseminar`

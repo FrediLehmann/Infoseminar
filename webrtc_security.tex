@@ -1,0 +1,4 @@
+\section{Security}
+Generally \index{WebRTC}{WebRTC} traffic is encrypted using Datagram Transport Layer Security (DTLS). Your data will be as secure as using any standard SSL based connection. Traffic that is relayed over a \index{TURN}{TURN} server on the other hand is not necessarily end-to-end encrypted.
+
+\textit{Confidentiality for the application data relayed by \index{TURN}{TURN} is best provided by the application protocol itself, since running \index{TURN}{TURN} over TLS does not protect application data between the server and the peer. If confidentiality of application data is important, then the application should encrypt or otherwise protect its data. For example, for real-time media, confidentiality can be provided by using SRTP.}~\cite{TURN:sec}

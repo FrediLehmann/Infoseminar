@@ -13,3 +13,8 @@
 *.glg
 *.ist
 *.gls
+*.idx
+*.ilg
+*.ind
+*.lol
+*.lot
