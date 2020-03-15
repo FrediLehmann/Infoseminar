@@ -37,5 +37,5 @@ In the following example we will take a look on how media can be send between pe
 \textit{The code only contains the necessary lines. Code that does not provide insights on the topic got removed.}
 \lstinputlisting[label=Send media,caption=Send media,language=JavaScript, style=JavaScript]{examples/sendMedia.js}
 
-\subsection{ICE Candidates}
-In a real world application we need to gather possible ICE candidates for our connection. This is achieved by gathering the sending clients ICE candidates and exchange them with the ICE candidates from the receiving client. This starts with the highest priority candidates and continues to the lowest until a common candidate is found. The \lstinline[basicstyle=\ttfamily\color{black}]|onicecandidate| event handler is used to listen for incoming ICE candidates.
+\subsection{\index{ICE}{ICE} Candidates}
+In a real world application we need to gather possible \index{ICE}{ICE} candidates for our connection. This is achieved by gathering the sending clients \index{ICE}{ICE} candidates and exchange them with the \index{ICE}{ICE} candidates from the receiving client. This starts with the highest priority candidates and continues to the lowest until a common candidate is found. The \lstinline[basicstyle=\ttfamily\color{black}]|onicecandidate| event handler is used to listen for incoming \index{ICE}{ICE} candidates.
