@@ -1,8 +1,8 @@
 \clearpage
 \chapter{Conclusion}
 
-\subsection{\index{STUN}{STUN} / \index{TURN}{TURN} Server}
-To not be dependent from open \index{STUN}{STUN}{}/\index{TURN}{TURN}{TURN} servers one can deploy his own servers. There are open source projects covering this case. For example coturn~\cite{coturn}.
+The development of \index{WebRTC}{WebRTC} has proceeded very well, to a point where one can create complete conferencing tools solely on a browser without the need of a installed software for the client. The example of \index{Jitsi Meet}{Jitsi Meet} impressively showcases the abilities of such browser only solutions. The common browsers not only implements \index{WebRTC}{WebRTC} in a way that it can used fairly simple, but also that the accommodating \index{API}{API}'s and technologies are in a well developed state.
 
-\subsection{\index{Videobridge}{Videobridge}}
-Video conferencing can be a resource intensive task for a browser. Which leads it to be a solution that is not really scalable. \index{Videobridge}{Videobridge} can help tackle this issue. The \index{Jitsi}{Jitsi} \index{Videobridge}{videobridge} is an open source example of such a \index{Videobridge}{videobridge}. It is used to implement scalable video conferencing platforms. It is an Selective Forwarding Unit (SFU) which relays video streams between peers.
+One pain point left is the need of a signaling server. \index{WebRTC}{WebRTC} still needs a signaling server to find peers. There are open \index{STUN}{STUN} and \index{TURN}{TURN} servers but it's rather easy to install \index{FOSS}{FOSS} solutions or use existing libraries.
+
+There are still limitations to what can de done on a peer-to-peer basis, especially with video conferencing. The limits of a browser or a network can be reached quite easily with video data in a high quality. There are solutions to fix that issue, like the \index{Jitsi Videobridge}{Jitsi Videobridge}, but they require even more servers rather then just a \index{STUN}{STUN}/\index{TURN}{TURN} server.

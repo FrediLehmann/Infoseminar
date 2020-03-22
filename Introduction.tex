@@ -1,15 +1,18 @@
 \clearpage
 \chapter{Introduction}
-\index{WebRTC}{WebRTC} is short for web real-time communication, it is an \index{API}{API} that modern browser support and can be used by web developers to implement a peer-to-peer communication. It can be used to capture and stream audio and/or video data, as well as to exchange arbitrary data between browsers.
+\index{WebRTC}{WebRTC} is short for web real-time communication, it is an \index{API}{API} that modern browser support and can be used by web developers to implement a \index{peer-to-peer}{peer-to-peer} communication. It can be used to capture and stream audio and/or video data, as well as to exchange arbitrary data between browsers.
 
 \section{Web Browser Support}
 All major browser support \index{WebRTC}{WebRTC} in its newest release. Older versions might not, or only partially, implement this \index{API}{API} so the Adapter.js~\autocite{adapterjs} project should be considered for productive solutions. For detailed information on supported browsers we can use the CanIUse~\autocite{caniuse} site.
 
 \section{Signaling Server}
-Although the \index{WebRTC}{WebRTC} is a peer-to-peer communication \index{API}{API} it can't fully function without a server. It needs a signaling server to resolve the connection between peers. After the peers have established a connection they don't need the signaling server anymore.
+Although the \index{WebRTC}{WebRTC} is a \index{peer-to-peer}{peer-to-peer} communication \index{API}{API} it can't fully function without a server. It needs a signaling server to resolve the connection between peers. After the peers have established a connection they don't need the signaling server anymore.
 
 \section{Related \index{API}{API}'s}
 There are multiple related topics to \index{WebRTC}{WebRTC}. In this section we'll try to give a quick overview over the most important ones.
 
 \subsubsection{Media Capture and Streams \index{API}{API}}
-This \index{API}{API} is heavily related to \index{WebRTC}{WebRTC}, it provides support for streaming audio and video data. Provided are interfaces and methods for working with the success and error callbacks when using the data asynchronously and the events that are fired during the process, as well as the constraints associated with data formats.
+This \index{API}{API} is heavily related to \index{WebRTC}{WebRTC}, it provides support for streaming audio and video data.
+
+\subsubsection{\index{WebSocket}{WebSocket}}
+Since \index{WebRTC}{WebRTC} needs to establish a connection to a peer there is a need for a intermediate to create this connection. Often such a signaling server is using \index{WebSocket}{WebSocket} since it provides a bidirectional communication.

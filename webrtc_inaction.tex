@@ -18,6 +18,7 @@ In this section we will showcase the ability to transfer arbitrary data between 
 
 \lstinputlisting[label=Sending data,caption=Sending data,language=JavaScript, style=JavaScript]{examples/sendData.js}
 
+\clearpage
 \subsection{Video Chat}
 
 \subsubsection{Client Media Check}
@@ -29,19 +30,23 @@ In this example we see how client media, in this case video and audio, can be ac
 
 \lstinputlisting[label=Access client media,caption=Access client media,language=JavaScript, style=JavaScript]{examples/accessMedia.js}
 
+\clearpage
 \subsubsection{Send Media}
 In the following example we will take a look on how media can be send between peers.
 
 \lstinputlisting[label=Send media,caption=Send media,language=JavaScript, style=JavaScript]{examples/sendMedia.js}
 
+\clearpage
 \subsection{ICE Candidates}
-In a real world application we need to gather possible \index{ICE}{ICE} candidates for our connection. This is achieved by gathering the sending clients \index{ICE}{ICE} candidates and exchange them with the \index{ICE}{ICE} candidates from the receiving client. This starts with the highest priority candidates and continues to the lowest until a common candidate is found. The \lstinline[basicstyle=\ttfamily\color{black}]|onicecandidate| event handler is used to listen for incoming \index{ICE}{ICE} candidates.
+In a real world application we need to find possible \index{ICE}{ICE} candidates for our connection. This is achieved by gathering the sending clients \index{ICE}{ICE} candidates and exchange them with the \index{ICE}{ICE} candidates from the receiving client. This starts with the highest priority candidates and continues to the lowest until a common candidate is found. The \lstinline[basicstyle=\ttfamily\color{black}]|onicecandidate| event handler is used to listen for incoming \index{ICE}{ICE} candidates.
 
 \begin{figure}[H]
-	\includegraphics[width=1\textwidth]{images/ICECandidateExchange.pdf}
-	\centering
+	\hspace*{-3cm}
+	\includegraphics[width=1.4\textwidth,height=0.99\textwidth]{images/ICECandidateExchange.pdf}
 	\caption{ICE communication schema, \url{https://mdn.mozillademos.org/files/12365/WebRTC - ICE Candidate Exchange.svg}}
 	\label{fig:ICE Candidate Exchange}
 \end{figure}
 
+\clearpage
+This is a short code example of such an \index{ICE}{ICE} candidate exchange.
 \lstinputlisting[label=ICE Candidates,caption=ICE Candidates,language=JavaScript, style=JavaScript]{examples/ICECandidate.js}
