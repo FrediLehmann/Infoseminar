@@ -6,3 +6,9 @@ The development of \index{WebRTC}{WebRTC} has proceeded very well, to a point wh
 One pain point left is the need of a signaling server. \index{WebRTC}{WebRTC} still needs a signaling server to find peers. There are open \index{STUN}{STUN} and \index{TURN}{TURN} servers but it's rather easy to install \index{FOSS}{FOSS} solutions or use existing libraries.
 
 There are still limitations to what can de done on a peer-to-peer basis, especially with video conferencing. The limits of a browser or a network can be reached quite easily with video data in a high quality. There are solutions to fix that issue, like the \index{Jitsi Videobridge}{Jitsi Videobridge}, but they require even more servers rather then just a \index{STUN}{STUN}/\index{TURN}{TURN} server.
+
+\chapter{Outlook}
+In a further project one could take a look on a more complete solution. How would the architecture of a fully working video conferencing application look, how's the signaling implemented, for example with socket.io~\autocite{socketio}, what are we using as \index{STUN}{STUN}/\index{TURN}{TURN} servers etc.. I think it would be quite interesting to see a complete solution to a conferencing tool.
+
+\section{Statement of Authorship}
+I hereby declare that I am the sole author of this work and that I have not used any sources other than those listed in the bibliography and identified as references.
